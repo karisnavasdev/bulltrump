@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <style>
+    @keyframes rotate {
+      0% {
+        transform: translate(0, 47.5%) rotate(0);
+      }
+
+      100% {
+        transform: translate(0, 47.5%) rotate(360deg);
+      }
+    }
+
+    @keyframes rotate-2 {
+      0% {
+        transform: translate(0, 47.5%) rotate(-10deg);
+      }
+
+      100% {
+        transform: translate(0, 47.5%) rotate(10deg);
+      }
+    }
+
+    @keyframes scale {
+      0% {
+        transform: translate(0, 47.5%) rotate(0) scaleY(1);
+      }
+
+      30% {
+        transform: translate(0, 47.5%) rotate(0) scaleY(3);
+      }
+
+      100% {
+        transform: translate(0, 47.5%) rotate(0) scaleY(0.5);
+      }
+    }
+
+    @keyframes scale-2 {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      75% {
+        transform: translate(-50%, -50%) scale(2);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    @keyframes down {
+      0% {
+        top: 0;
+      }
+
+      99% {
+        top: 100%;
+      }
+
+      100% {
+        top: 100%;
+        display: none;
+      }
+    }
+
+    .loader-box {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(36, 222, 245);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loader-box::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background-color: #000;
+      border-radius: 50%;
+      transform-origin: center;
+      animation: scale-2 1s ease infinite;
+    }
+
+    .loaded .loader-box::before {
+      animation: none;
+    }
+
+    .loader {
+      position: relative;
+      z-index: 2;
+      transform: translate(0, 47.5%) rotate(0);
+      transform-origin: center 6px;
+    }
+
+    .loader img {
+      width: 200px;
+    }
+
+    .loaded .loader {
+      animation: rotate 1s ease-in 0.3s, scale 1s ease 1.3s forwards;
+    }
+
+    .loaded .loader-box {
+      animation: down 0.6s ease 1.6s forwards;
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.min.css?_v=20240822014700" />
+  <!-- <meta name="robots" content="noindex, nofollow"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Trump the Bull</title>
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <meta name="description" content="Trump the Bull" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta property="og:title" content="Trump the Bull" />
+  <meta property="og:description" content="Trump the Bull" />
+  <meta property="og:site_name" content="Trump the Bull" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="/meta-images/telegram-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trump the Bull" />
+  <meta name="twitter:description" content="Trump the Bull" />
+  <meta name="twitter:image" content="/meta-images/telegram-banner.png" />
+  
+</head>
+
+<body>
+  <div class="loader-box">
+    <span class="loader"><img src="img/loader.png" alt="Image" /></span>
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo"><img width="100" src="/logo.png" alt="Logo Image" /></a>
+        <div class="header__menu menu">
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" data-goto-header data-goto=".hero" class="menu__link">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" data-goto-header data-goto=".about" class="menu__link">About</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" data-goto-header data-goto=".tokenomics" class="menu__link">Tokenomics</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" data-goto-header data-goto=".follow" class="menu__link">Socials</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="button" class="menu__icon icon-menu">
+            <span></span>
+          </button>
+        </div>
+        <div data-da=".menu__body, 991.98" class="header__actions">
+          <a target="_blank" href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=Ff4yJaJ6hhmBsEXrFwM8QpXFUKDeL7sZSsv3jWSXpump" class="header__action button">
+            <img src="img/buy.png" alt="Telegram Icon" />
+            <span>Buy Now</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section data-watch="navigator" data-watch-threshold="0.51" class="page__hero hero">
+        <div class="hero__background">
+          <span></span><span></span>
+          <img src="img/hero/bg2.png" alt="Background Image" />
+        </div>
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              
+              <span>Trump the Bull</span>
+            </h1>
+            <div class="hero__actions">
+              <a target="_blank" href="https://www.dextools.io/app/sol/pair-explorer/Ff4yJaJ6hhmBsEXrFwM8QpXFUKDeL7sZSsv3jWSXpump"
+                class="hero__button hero__button--white"><img src="img/dext.webp" alt="logo" /></a>
+
+              <a target="_blank" href="https://dexscreener.com/solana/Ff4yJaJ6hhmBsEXrFwM8QpXFUKDeL7sZSsv3jWSXpump"
+                class="hero__button hero__button--white">
+                <img src="img/dex.png" alt="logo" />
+              </a>
+            </div>
+          </div>
+          <div class="hero__image">
+            <img src="/img/hero.png" alt="Image" />
+          </div>
+        </div>
+      </section>
+      <section data-watch="navigator" data-watch-threshold="0.51" class="page__about about">
+        <div class="about__container">
+          <div class="about__body">
+            <div data-watch-threshold="0.6" data-watch-once data-watch class="about__content">
+              <h2 class="about__title">About</h2>
+              <div class="about__text">
+                <!-- One Cat, One Floki. Trillions of Owners. This is the ultimate animal! -->
+                Trump the Bull ($BULLTRUMP) charges into the spotlight with unstoppable energy, blending the bold persona of Donald Trump with the raw power of a raging bull.
+              </div>
+            </div>
+            <div class="about__image">
+              <img src="img/about/01.png" alt="Image" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-watch="navigator" data-watch-threshold="0.51" class="page__features features">
+        <div class="features__background"></div>
+        <div class="features__container">
+          <div data-watch-threshold="0.6" data-watch-once data-watch class="features__herader">
+            <h2 class="features__title">ROADMAP</h2>
+            <div class="features__text">
+              Fueled by strength, dominance, and fearless momentum, BULLTRUMP represents a movement that refuses to back down—charging forward through volatility with confidence, pride, and unstoppable bullish spirit.
+            </div>
+          </div>
+          <div data-watch-threshold="0.6" data-watch-once data-watch class="features__items">
+            <div class="features__item item-features">
+              <h3 class="item-features__title">PHASE 1</h3>
+              <div class="item-features__text">
+                - Token Launched<br />
+                - Contract Verified<br />
+                - DEXTools & Dexscreener Socials Updated<br />
+                - CMC & CG Applications
+              </div>
+            </div>
+            <div class="features__item item-features">
+              <h3 class="item-features__title">PHASE 2</h3>
+              <div class="item-features__text">
+                - CMC & CG Listings<br />
+                - Marketing Campaigns Kick Off<br />
+                - Tier 3 CEX Listings
+              </div>
+            </div>
+            <div class="features__item item-features">
+              <h3 class="item-features__title">PHASE 3</h3>
+              <div class="item-features__text">
+                - Tier 2 CEX Listings<br />
+                - Strategic Partnerships
+              </div>
+            </div>
+            <div class="features__item item-features">
+              <h3 class="item-features__title">PHASE 4</h3>
+              <div class="item-features__text">
+                - Tier 1 CEX Listings<br />
+                - Time to Build
+              </div>
+            </div>
+            <!-- <div class="features__item item-features">
+                <h3 class="item-features__title">Q3 - VITALIK’S BULL RIDE</h3>
+                <div class="item-features__text">
+                  To wrap up the year, we’ve got Vitalik’s Bull Ride. No one
+                  knows what it is, not even Vitalik, but it’s bound to be a
+                  laugh. Maybe he’ll ride a bull, maybe we’ll all just share
+                  memes—it’s anyone’s guess!
+                </div>
+              </div> -->
+          </div>
+        </div>
+      </section>
+      <section data-watch="navigator" data-watch-threshold="0.85" class="page__tokenomics tokenomics">
+        <div class="tokenomics__container">
+          <div data-watch-threshold="0.6" data-watch-once data-watch class="tokenomics__header">
+            <h2 class="tokenomics__title">
+              Tokenomics
+            </h2>            
+          </div>
+          <div data-watch-threshold="0.6" data-watch-once data-watch class="tokenomics__items">
+            <div class="tokenomics__item item-tokenomics">
+              <div class="item-tokenomics__title">$BULLTRUMP</div>
+              <div class="item-tokenomics__text">Symbol</div>
+            </div>
+            <div class="tokenomics__item item-tokenomics">
+              <div class="item-tokenomics__title">0/0</div>
+              <div class="item-tokenomics__text">Tax</div>
+            </div>
+            <div class="tokenomics__item item-tokenomics">
+              <div class="item-tokenomics__title">Locked</div>
+              <div class="item-tokenomics__text">Liquidity Pool</div>
+            </div>
+          </div>
+          <div class="tokenomics__number">
+              <div class="tokenomics__number-body">
+                <div class="tokenomics__number-text">
+                  Ff4yJaJ6hhmBsEXrFwM8QpXFUKDeL7sZSsv3jWSXpump
+                </div>
+                <button type="button" class="tokenomics__number-button copy-ca-btn">
+                  <img src="img/icons/copy.svg" alt="Icon" />
+                </button>
+              </div>
+              <div class="tokenomics__number-bottom-text">
+                Contract Address
+              </div>
+            </div>
+        </div>
+      </section>
+      <section data-watch="navigator" data-watch-threshold="1" class="page__follow follow">
+        <div class="follow__container">
+          <div data-watch-threshold="0.5" data-watch-once data-watch class="follow__body">
+            <div class="follow__body-info">
+              <h2 class="follow__body-title">
+                Follow $BULLTRUMP on social media
+              </h2>
+              <div class="follow__body-actions">
+                
+                <a target="_blank" href="https://x.com/bulltrumpX"
+                  class="follow__body-button button button-black"><img src="img/icons/x.svg"
+                    alt="Twitter Icon" /><span>Follow Twitter/X</span></a>
+              </div>
+            </div>
+            <div class="follow__body-image">
+              <img src="img/follow/01.png" alt="Image" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__body">
+          <div class="footer__top">
+            <a href="index.html" class="footer__logo"><img width="100" src="/logo.png" alt="Logo Image" /></a>
+            <div class="footer__social">
+             
+              <a target="_blank" href="https://x.com/bulltrumpX" class="footer__social-item">
+                <img src="img/icons/x-foot.svg" alt="Icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.min.js?_v=20240822014700"></script>
+</body>
+
+</html>
